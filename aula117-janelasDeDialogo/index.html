@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Janelas de Diálogo</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+
+        <h1>Janelas de Diálogo</h1>
+
+        <p id="resposta">a resposta aparecerá aqui...</p>
+        <button type="button" id="botao">Botão</button>
+
+        <script>
+            window.onload = function(){
+                var botao = document.getElementById("botao");
+                botao.onclick = alerta;
+            }
+
+            function alerta(){
+                //resposta.innerHTML = confirm("Qual sua resposta?")?"Cliquei em confirm":"Não cliquei em confirm";
+                
+                resposta.innerHTML = prompt("Qual seu nome?", "Rodrigo Zandonadi");
+
+            }
+        </script>
+
+    </body>
+</html>

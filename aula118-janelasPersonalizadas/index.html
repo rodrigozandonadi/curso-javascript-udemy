@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <title>Janelas Personalizadas</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+
+        <h1>Janelas Personalizadas</h1>
+
+        <p id="resposta">a resposta aparecerá aqui...</p>
+        <button type="button" id="botao">Botão</button>
+        <button type="button" id="outro">Outro</button>
+        <button type="button" id="fechar">Fechar</button>
+        <button type="button" id="modificar">Modificar</button>
+
+        <script>
+            window.onload = function(){
+                var botao = document.getElementById("botao");
+                var outro = document.getElementById("outro");
+                var fechar = document.getElementById("fechar");
+                var modificar = document.getElementById("modificar");
+                var resposta = document.getElementById("resposta");
+
+                botao.onclick = abrirJanela;
+                outro.onclick = diversos;
+                fechar.onclick = fecharJanela;
+                modificar.onclick = modificaJanela;
+            }
+
+            function abrirJanela(){
+                novaJanela = window.open("http://rodrigozan.com", 
+                                            "janela1", "width=400, height=400"
+                                            );
+            }
+
+            function diversos() {
+                resposta.innerHTML = (novaJanela.closed)?"Fechada":"Aberta";
+            }
+
+            function fecharJanela() {
+                novaJanela.close();
+            }
+
+            function modificaJanela(){
+                novaJanela.opener.document.body.style.background = "red";
+            }
+
+        </script>
+
+    </body>
+</html>
