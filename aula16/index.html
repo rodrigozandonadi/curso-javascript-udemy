@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title> Estamos estudando java Script </title>
+        <meta charset="utf-8">
+    </head>
+    <body>
+
+        <p> seu texto</p>
+            <button onclick>resultado </button>
+            <button onclick="subtrair()">Subtracao  </button>
+            <button onclick="multiplicar()">Multiplicacao  </button>
+
+        <script>
+            function retangulo(base , altura){
+
+                var area = base * altura;
+                var perimetro = (base * altura)/2;
+                
+                return [area, perimetro];
+            }
+
+            var resultado = retangulo(7,4);
+            console.log();
+            console.log("Area = " + resultado[0] + "\nPerímetro = " + resultado[1]);
+        </script>
+            
+    </body>
+</html>
+
+
